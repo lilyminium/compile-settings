@@ -49,11 +49,8 @@ Cuda compilation tools, release 8.0, V8.0.61
 #### Process
 ```console
 lily@gavle:$ cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DGMX_GPU=on -DCMAKE_INSTALL_PREFIX=/packages/gromacs/2016.1 -DCMAKE_CXX_FLAGS=-fPIC -DCUDA_TOOLKIT_ROOT_DIR=/packages/cuda/8.0
-
 lily@gavle:$ make -j 6
-
 lily@gavle:$ make check
-
 lily@gavle:$ sudo checkinstall
 ```
 
@@ -82,11 +79,8 @@ Cuda compilation tools, release 10.1, V10.1.105
 #### Process
 ```console
 lily@gavle:$ cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON -DGMX_GPU=on -DCMAKE_INSTALL_PREFIX=/packages/gromacs/2016.1 -DCMAKE_CXX_FLAGS=-fPIC -DCUDA_TOOLKIT_ROOT_DIR=/packages/cuda/8.0
-
 lily@gavle:$ make -j 6
-
 lily@gavle:$ make check
-
 lily@gavle:$ sudo checkinstall
 ```
 
@@ -116,10 +110,8 @@ Cuda compilation tools, release 10.1, V10.1.105
 
 #### Process
 ```console
-lily@gavle:$ cd 
-
+lily@gavle:$ cd /packages/amber/18
 lily@gavle:$ ./configure -cuda gnu
-
 lily@gavle:$ sudo checkinstall
 ```
 
@@ -133,9 +125,7 @@ However, if you are installing at a system level and require root permissions, `
 
 ```console
 lily@gavle:$ sudo su
-
 root@gavle:$ export CUDA_HOME=/packages/cuda/10.1
-
 root@gavle:$ echo $CUDA_HOME && checkinstall
 ```
 
