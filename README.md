@@ -8,6 +8,7 @@ A log of the installation dependencies and processes of annoying packages, as we
 - [AMBER](#amber)
 
 <a name="notes"/>
+
 ## Useful notes
 ### checkinstall
 [checkinstall](https://wiki.debian.org/CheckInstall) is a useful tool that replaces `make install`. It builds a .deb package that is easily removable with:
@@ -19,9 +20,12 @@ If you name your package the same as any package in the repositories accessible 
 
 
 <a name="gmx"/>
+
 ## GROMACS
 ### 2016.1
 #### Dependencies
+gcc=5.5
+cuda=8.0
 ```console
 ~/src/gromacs/gromacs-2016.1/build$ gcc --version
 gcc (Ubuntu 5.5.0-12ubuntu1) 5.5.0 20171010
@@ -49,6 +53,8 @@ sudo checkinstall
 
 ### 2018.1
 #### Dependencies
+gcc=6.5
+cuda=10.1
 ```console
 ~/src/gromacs/gromacs-2018.1/build$ gcc --version
 gcc (Ubuntu 6.5.0-2ubuntu1) 6.5.0 20181026
@@ -76,10 +82,12 @@ sudo checkinstall
 ```
 
 <a name="amber"/>
-## AMBER
 
+## AMBER
 ### 18
 #### Dependencies
+gcc=8.3.0
+cuda=10.1
 ```console
 /packages/amber/18$ gcc --version
 gcc (Ubuntu 8.3.0-6ubuntu1) 8.3.0
@@ -119,4 +127,4 @@ export CUDA_HOME=/packages/cuda/10.1
 echo $CUDA_HOME && checkinstall
 ```
 
-I also symlinked /packages/amber/18/bin/cpptraj.cuda to /packages/amber/18/bin/cpptraj .
+I also symlinked `/packages/amber/18/bin/cpptraj.cuda` to `/packages/amber/18/bin/cpptraj` .
