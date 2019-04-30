@@ -12,7 +12,10 @@ A log of the installation dependencies and processes of annoying packages, as we
 ## Useful notes
 ### checkinstall
 [checkinstall](https://wiki.debian.org/CheckInstall) is a useful tool that replaces `make install`. It builds a .deb package that is easily removable with:
-```dpkg -r yourpackagename```
+
+```console
+dpkg -r yourpackagename
+```
 
 **Warning**
 
@@ -24,8 +27,11 @@ If you name your package the same as any package in the repositories accessible 
 ## GROMACS
 ### 2016.1
 #### Dependencies
+
 gcc=5.5
+
 cuda=8.0
+
 ```console
 ~/src/gromacs/gromacs-2016.1/build$ gcc --version
 gcc (Ubuntu 5.5.0-12ubuntu1) 5.5.0 20171010
@@ -53,8 +59,11 @@ sudo checkinstall
 
 ### 2018.1
 #### Dependencies
+
 gcc=6.5
+
 cuda=10.1
+
 ```console
 ~/src/gromacs/gromacs-2018.1/build$ gcc --version
 gcc (Ubuntu 6.5.0-2ubuntu1) 6.5.0 20181026
@@ -86,8 +95,11 @@ sudo checkinstall
 ## AMBER
 ### 18
 #### Dependencies
+
 gcc=8.3.0
+
 cuda=10.1
+
 ```console
 /packages/amber/18$ gcc --version
 gcc (Ubuntu 8.3.0-6ubuntu1) 8.3.0
